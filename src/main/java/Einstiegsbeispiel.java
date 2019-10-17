@@ -1,20 +1,25 @@
 public class Einstiegsbeispiel {
 
-    public int binary2decimal (int binary){
-        int dez = 0;
-        int i = 0;
-        while(true){
-            if(binary==0){
-                break;
 
-            }else{
-                int temp = binary%10;
-                dez += temp*Math.pow(2, i);
-                binary = binary/10;
-                i++;
-            }
+    public static int binary2decimal(int bin) {
+        if(bin < 0) {
+            return -1;
         }
 
-        return dez;
+        int dec = 0;
+        int base = 1;
+
+        int helper = bin;
+        while (helper > 0) {
+            int last_digit = helper % 10;
+            helper = helper / 10;
+
+            dec += last_digit * base;
+
+            base *= 2;
+        }
+
+        return dec;
     }
+
 }
