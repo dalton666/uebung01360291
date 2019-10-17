@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class EinstiegsbeispielTest {
 
 
+
     @Test
     void positiveTest1() {
         assertEquals(0, Einstiegsbeispiel.binary2decimal(0));
